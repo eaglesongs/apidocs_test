@@ -1,10 +1,10 @@
 # REST API Version 17.0
 
-*   [What's new in REST API Version 17.0](api_170/c_rest_api_whats_new_170.html)
-*   [access endpoints](api_170/c_rest_api_version170_access_intro.html)
-    *   [GET /access/login\_attempts](api_170/17.0--access-login_attempts-GET.html)
-*   [analytics endpoints](api_170/c_rest_api_version170_analytics_intro.html)
-    *   [GET /analytics/ade\_rules](api_170/17.0--analytics-ade_rules-GET.html)
+*   [What's new in REST API Version 17.0](api_170/c_rest_api_whats_new_170.md)
+*   [access endpoints](api_170/c_rest_api_version170_access_intro.md)
+    *   [GET /access/login\_attempts](api_170/17.0--access-login_attempts-GET.md)
+*   [analytics endpoints](api_170/c_rest_api_version170_analytics_intro.md)
+    *   [GET /analytics/ade\_rules](api_170/17.0--analytics-ade_rules-GET.md)
     *   [GET /analytics/ade\_rules/ade\_rule\_delete\_tasks/\{task\_id\}](api_170/17.0--analytics-ade_rules-ade_rule_delete_tasks-task_id-GET.html)
     *   [GET /analytics/ade\_rules/ade\_rule\_dependent\_tasks/\{task\_id\}](api_170/17.0--analytics-ade_rules-ade_rule_dependent_tasks-task_id-GET.html)
     *   [POST /analytics/ade\_rules/ade\_rule\_dependent\_tasks/\{task\_id\}](api_170/17.0--analytics-ade_rules-ade_rule_dependent_tasks-task_id-POST.html)
