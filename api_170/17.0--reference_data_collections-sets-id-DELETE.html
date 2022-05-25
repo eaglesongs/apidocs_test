@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Delete a set by starting an asynchronous task">
+<meta name="keywords" content="/reference_data_collections/sets/{id}, DELETE, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="stylesheet" type="text/css" href="consolidation.css">
+<link rel="Start" href="c_rest_api_version170_reference_data_collections_intro.html">
+<title>DELETE /reference_data_collections/sets/{id}</title>
+</head>
+<body id="api-17.0--reference_data_collections-sets-id-DELETE"><main role="main"><article role="article" aria-labelledby="d325512e10">
+<h1 class="topictitle1" id="d325512e10">DELETE /reference_data_collections/sets/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Delete a set by starting an asynchronous task</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /reference_data_collections/sets/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. DELETE /reference_data_collections/sets/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d325512e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d325512e60 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /reference_data_collections/sets/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. DELETE /reference_data_collections/sets/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d325512e108" class="thbot">Parameter</th>
+
+<th id="d325512e111" class="thbot">Type</th>
+
+<th id="d325512e114" class="thbot">Optionality</th>
+
+<th id="d325512e117" class="thbot">Data Type</th>
+
+<th id="d325512e120" class="thbot">MIME Type</th>
+
+<th id="d325512e124" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d325512e108 "><p>id</p>
+</td>
+
+<td headers="d325512e111 "><p>path</p>
+</td>
+
+<td headers="d325512e114 "><p>Required</p>
+</td>
+
+<td headers="d325512e117 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d325512e120 "><p>text/plain</p>
+</td>
+
+<td headers="d325512e124 "><p>- The ID for the Set collection</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d325512e108 "><p>fields</p>
+</td>
+
+<td headers="d325512e111 "><p>query</p>
+</td>
+
+<td headers="d325512e114 "><p>Optional</p>
+</td>
+
+<td headers="d325512e117 "><p>String</p>
+</td>
+
+<td headers="d325512e120 "><p>text/plain</p>
+</td>
+
+<td headers="d325512e124 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /reference_data_collections/sets/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. DELETE /reference_data_collections/sets/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d325512e214" class="thbot">HTTP Response Code</th>
+
+<th id="d325512e217" class="thbot">Unique Code</th>
+
+<th id="d325512e220" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d325512e214 "><p>403</p>
+</td>
+
+<td headers="d325512e217 "><p>12001</p>
+</td>
+
+<td headers="d325512e220 "><p>The operation is not allowed.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d325512e214 "><p>404</p>
+</td>
+
+<td headers="d325512e217 "><p>12000</p>
+</td>
+
+<td headers="d325512e220 "><p>The reference set does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d325512e214 "><p>404</p>
+</td>
+
+<td headers="d325512e217 "><p>12002</p>
+</td>
+
+<td headers="d325512e220 "><p>The Delete task does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d325512e214 "><p>500</p>
+</td>
+
+<td headers="d325512e217 "><p>110000</p>
+</td>
+
+<td headers="d325512e220 "><p>An unknown server error occurred.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d325512e293"><h2 class="sectiontitle" id="d325512e293">Response Description</h2>
+
+<p>202 and the task status for this Delete Set request</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d325512e303"><h2 class="sectiontitle" id="d325512e303">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "completed": 42,
+    "created": 42,
+    "created_by": "String",
+    "id": 42,
+    "message": "String",
+    "modified": 42,
+    "name": "String",
+    "started": 42,
+    "status": "String &lt;one of: CANCELLED, CANCELING, CANCEL_REQUESTED, COMPLETED, CONFLICT, EXCEPTION, INITIALIZING, INTERRUPTED, PAUSED, PROCESSING, QUEUED, RESUMING&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d325512e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version170_reference_data_collections_intro.html" title="Use the references for REST API 17.0 reference_data_collections endpoints.">reference_data_collections endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

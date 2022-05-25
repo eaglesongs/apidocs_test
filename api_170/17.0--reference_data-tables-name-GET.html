@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Return the reference table identified by name.">
+<meta name="keywords" content="/reference_data/tables/{name}, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="stylesheet" type="text/css" href="consolidation.css">
+<link rel="Start" href="c_rest_api_version170_reference_data_intro.html">
+<title>GET /reference_data/tables/{name}</title>
+</head>
+<body id="api-17.0--reference_data-tables-name-GET"><main role="main"><article role="article" aria-labelledby="d304683e10">
+<h1 class="topictitle1" id="d304683e10">GET /reference_data/tables/{name}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Return the reference table identified by name.</p>
+
+<div class="section refsyn">
+<p>Return the reference table identified by <strong>name</strong>. If provided, <strong>limit</strong> specifies the number
+ of records to return starting at record specified by <strong>offset</strong>. If not specified, then the first
+ 20 records will be returned.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /reference_data/tables/{name} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /reference_data/tables/{name} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d304683e73" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d304683e73 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /reference_data/tables/{name} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /reference_data/tables/{name} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d304683e121" class="thbot">Parameter</th>
+
+<th id="d304683e124" class="thbot">Type</th>
+
+<th id="d304683e127" class="thbot">Optionality</th>
+
+<th id="d304683e130" class="thbot">Data Type</th>
+
+<th id="d304683e133" class="thbot">MIME Type</th>
+
+<th id="d304683e137" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d304683e121 "><p>name</p>
+</td>
+
+<td headers="d304683e124 "><p>path</p>
+</td>
+
+<td headers="d304683e127 "><p>Required</p>
+</td>
+
+<td headers="d304683e130 "><p>String</p>
+</td>
+
+<td headers="d304683e133 "><p>text/plain</p>
+</td>
+
+<td headers="d304683e137 "><p>Required - The name of the reference table to retrieve</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d304683e121 "><p>namespace</p>
+</td>
+
+<td headers="d304683e124 "><p>query</p>
+</td>
+
+<td headers="d304683e127 "><p>Optional</p>
+</td>
+
+<td headers="d304683e130 "><p>String</p>
+</td>
+
+<td headers="d304683e133 "><p>text/plain</p>
+</td>
+
+<td headers="d304683e137 "><p>Either SHARED or TENANT, default is SHARED.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d304683e121 "><p>Range</p>
+</td>
+
+<td headers="d304683e124 "><p>header</p>
+</td>
+
+<td headers="d304683e127 "><p>Optional</p>
+</td>
+
+<td headers="d304683e130 "><p>String</p>
+</td>
+
+<td headers="d304683e133 "><p>text/plain</p>
+</td>
+
+<td headers="d304683e137 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d304683e121 "><p>fields</p>
+</td>
+
+<td headers="d304683e124 "><p>query</p>
+</td>
+
+<td headers="d304683e127 "><p>Optional</p>
+</td>
+
+<td headers="d304683e130 "><p>String</p>
+</td>
+
+<td headers="d304683e133 "><p>text/plain</p>
+</td>
+
+<td headers="d304683e137 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /reference_data/tables/{name} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /reference_data/tables/{name} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d304683e283" class="thbot">HTTP Response Code</th>
+
+<th id="d304683e286" class="thbot">Unique Code</th>
+
+<th id="d304683e289" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d304683e283 "><p>200</p>
+</td>
+
+<td headers="d304683e286 "><p></p>
+</td>
+
+<td headers="d304683e289 "><p>The reference table has been retrieved</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d304683e283 "><p>404</p>
+</td>
+
+<td headers="d304683e286 "><p>1002</p>
+</td>
+
+<td headers="d304683e289 "><p>The reference table does not exist</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d304683e283 "><p>422</p>
+</td>
+
+<td headers="d304683e286 "><p>1005</p>
+</td>
+
+<td headers="d304683e289 "><p>A request parameter is not valid</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d304683e283 "><p>422</p>
+</td>
+
+<td headers="d304683e286 "><p>1012</p>
+</td>
+
+<td headers="d304683e289 "><p>The namespace value of SHARED was expected</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d304683e283 "><p>500</p>
+</td>
+
+<td headers="d304683e286 "><p>1020</p>
+</td>
+
+<td headers="d304683e289 "><p>An error occurred while attempting to retrieve the reference table</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d304683e376"><h2 class="sectiontitle" id="d304683e376">Response Description</h2>
+
+<p>The reference table identified by the name specified in the request. The portion of the reference table's data returned is dependent on the limit and offset specified in the request.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d304683e386"><h2 class="sectiontitle" id="d304683e386">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "collection_id": 42,
+    "creation_time": 42,
+    "data": {
+        "String": {
+            "String": {
+                "domain_id": 42,
+                "first_seen": 42,
+                "last_seen": 42,
+                "source": "String",
+                "value": "String"
+            }
+        }
+    },
+    "element_type": "String &lt;one of: ALN, NUM, IP, PORT, ALNIC, DATE&gt;",
+    "key_label": "String",
+    "key_name_types": {
+        "String": "String &lt;one of: ALN, NUM, IP, PORT, ALNIC, DATE&gt;"
+    },
+    "name": "String",
+    "namespace": "String &lt;one of: PRIVATE, SHARED, TENANT&gt;",
+    "number_of_elements": 42,
+    "time_to_live": "String",
+    "timeout_type": "String &lt;one of: UNKNOWN, FIRST_SEEN, LAST_SEEN&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d304683e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version170_reference_data_intro.html" title="Use the references for REST API 17.0 reference_data endpoints.">reference_data endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

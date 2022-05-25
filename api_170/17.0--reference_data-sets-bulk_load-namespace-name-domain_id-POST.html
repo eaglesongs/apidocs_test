@@ -1,0 +1,389 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Add or update data in a reference set.">
+<meta name="keywords" content="/reference_data/sets/bulk_load/{namespace}/{name}/{domain_id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="stylesheet" type="text/css" href="consolidation.css">
+<link rel="Start" href="c_rest_api_version170_reference_data_intro.html">
+<title>POST /reference_data/sets/bulk_load/{namespace}/{name}/{domain_id}</title>
+</head>
+<body id="api-17.0--reference_data-sets-bulk_load-namespace-name-domain_id-POST"><main role="main"><article role="article" aria-labelledby="d11430e10">
+<h1 class="topictitle1" id="d11430e10">POST /reference_data/sets/bulk_load/{namespace}/{name}/{domain_id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Add or update data in a reference set.</p>
+
+<div class="section refsyn">
+<p>Add or update data in a reference set.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /reference_data/sets/bulk_load/{namespace}/{name}/{domain_id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /reference_data/sets/bulk_load/{namespace}/{name}/{domain_id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d11430e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d11430e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /reference_data/sets/bulk_load/{namespace}/{name}/{domain_id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /reference_data/sets/bulk_load/{namespace}/{name}/{domain_id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d11430e112" class="thbot">Parameter</th>
+
+<th id="d11430e115" class="thbot">Type</th>
+
+<th id="d11430e118" class="thbot">Optionality</th>
+
+<th id="d11430e121" class="thbot">Data Type</th>
+
+<th id="d11430e124" class="thbot">MIME Type</th>
+
+<th id="d11430e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d11430e112 "><p>namespace</p>
+</td>
+
+<td headers="d11430e115 "><p>path</p>
+</td>
+
+<td headers="d11430e118 "><p>Required</p>
+</td>
+
+<td headers="d11430e121 "><p>String</p>
+</td>
+
+<td headers="d11430e124 "><p>text/plain</p>
+</td>
+
+<td headers="d11430e128 "><p>Required - Either SHARED or TENANT.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d11430e112 "><p>name</p>
+</td>
+
+<td headers="d11430e115 "><p>path</p>
+</td>
+
+<td headers="d11430e118 "><p>Required</p>
+</td>
+
+<td headers="d11430e121 "><p>String</p>
+</td>
+
+<td headers="d11430e124 "><p>text/plain</p>
+</td>
+
+<td headers="d11430e128 "><p>Required - The name of set to add or update data in</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d11430e112 "><p>domain_id</p>
+</td>
+
+<td headers="d11430e115 "><p>path</p>
+</td>
+
+<td headers="d11430e118 "><p>Required</p>
+</td>
+
+<td headers="d11430e121 "><p>String</p>
+</td>
+
+<td headers="d11430e124 "><p>text/plain</p>
+</td>
+
+<td headers="d11430e128 "><p>Required - Specify the numeric domain_id tag for the data or SHARED for Admin users. Must be a domain ID for which the caller has access.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d11430e112 "><p>fields</p>
+</td>
+
+<td headers="d11430e115 "><p>header</p>
+</td>
+
+<td headers="d11430e118 "><p>Optional</p>
+</td>
+
+<td headers="d11430e121 "><p>String</p>
+</td>
+
+<td headers="d11430e124 "><p>text/plain</p>
+</td>
+
+<td headers="d11430e128 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /reference_data/sets/bulk_load/{namespace}/{name}/{domain_id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /reference_data/sets/bulk_load/{namespace}/{name}/{domain_id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d11430e279" class="thbot">Parameter</th>
+
+<th id="d11430e282" class="thbot">Data Type</th>
+
+<th id="d11430e285" class="thbot">MIME Type</th>
+
+<th id="d11430e288" class="thbot">Description</th>
+
+<th id="d11430e291" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d11430e279 "><p>data</p>
+</td>
+
+<td headers="d11430e282 "><p>Array</p>
+</td>
+
+<td headers="d11430e285 "><p>application/json</p>
+</td>
+
+<td headers="d11430e288 "><p>Required - The JSON formated data to add or update in the reference set</p>
+</td>
+
+<td headers="d11430e291 "><p>["String",
+ "String",
+ "String",
+ "String",
+ "String",
+ "String",
+ "String",
+ "String",
+ "String",
+ "String",
+ "String"]</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /reference_data/sets/bulk_load/{namespace}/{name}/{domain_id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /reference_data/sets/bulk_load/{namespace}/{name}/{domain_id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d11430e348" class="thbot">HTTP Response Code</th>
+
+<th id="d11430e351" class="thbot">Unique Code</th>
+
+<th id="d11430e354" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d11430e348 "><p>200</p>
+</td>
+
+<td headers="d11430e351 "><p></p>
+</td>
+
+<td headers="d11430e354 "><p>The reference set has had data added or updated</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d11430e348 "><p>400</p>
+</td>
+
+<td headers="d11430e351 "><p>1001</p>
+</td>
+
+<td headers="d11430e354 "><p>An error occurred parsing the JSON formatted message body</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d11430e348 "><p>404</p>
+</td>
+
+<td headers="d11430e351 "><p>1002</p>
+</td>
+
+<td headers="d11430e354 "><p>The reference set does not exist</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d11430e348 "><p>404</p>
+</td>
+
+<td headers="d11430e351 "><p>1011</p>
+</td>
+
+<td headers="d11430e354 "><p>Domain not found</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d11430e348 "><p>422</p>
+</td>
+
+<td headers="d11430e351 "><p>1005</p>
+</td>
+
+<td headers="d11430e354 "><p>A request parameter is not valid</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d11430e348 "><p>422</p>
+</td>
+
+<td headers="d11430e351 "><p>1012</p>
+</td>
+
+<td headers="d11430e354 "><p>The namespace value of SHARED was expected</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d11430e348 "><p>422</p>
+</td>
+
+<td headers="d11430e351 "><p>1014</p>
+</td>
+
+<td headers="d11430e354 "><p>The domain_id parameter must be specified</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d11430e348 "><p>422</p>
+</td>
+
+<td headers="d11430e351 "><p>1015</p>
+</td>
+
+<td headers="d11430e354 "><p>The namespace parameter must be either SHARED or TENANT</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d11430e348 "><p>500</p>
+</td>
+
+<td headers="d11430e351 "><p>1020</p>
+</td>
+
+<td headers="d11430e354 "><p>An error occurred while attempting to add or update data in the reference set</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d11430e503"><h2 class="sectiontitle" id="d11430e503">Response Description</h2>
+
+<p>Information about the reference set that had data added or updated. This returns information about the reference set but not the contained data.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d11430e512"><h2 class="sectiontitle" id="d11430e512">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "collection_id": 42,
+    "creation_time": 42,
+    "element_type": "String &lt;one of: ALN, NUM, IP, PORT, ALNIC, DATE&gt;",
+    "name": "String",
+    "namespace": "String &lt;one of: PRIVATE, SHARED, TENANT&gt;",
+    "number_of_elements": 42,
+    "time_to_live": "String",
+    "timeout_type": "String &lt;one of: UNKNOWN, FIRST_SEEN, LAST_SEEN&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d11430e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version170_reference_data_intro.html" title="Use the references for REST API 17.0 reference_data endpoints.">reference_data endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>
