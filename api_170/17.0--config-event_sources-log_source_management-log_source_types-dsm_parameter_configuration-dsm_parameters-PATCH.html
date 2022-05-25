@@ -1,0 +1,402 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Create new dsm parameters or Update available dsm parameters.">
+<meta name="keywords" content="/config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters, PATCH, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="stylesheet" type="text/css" href="consolidation.css">
+<link rel="Start" href="c_rest_api_version170_config_intro.html">
+<title>PATCH /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters</title>
+</head>
+<body id="api-17.0--config-event_sources-log_source_management-log_source_types-dsm_parameter_configuration-dsm_parameters-PATCH"><main role="main"><article role="article" aria-labelledby="d273986e10">
+<h1 class="topictitle1" id="d273986e10">PATCH /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Create new dsm parameters or Update available dsm parameters. </p>
+
+<div class="section refsyn">The following fields can be provided in the body of this request, all other dsm parameter
+fields will be ignored: <ul>
+<li><strong>id</strong> - Long- The id of the dsm parameter. If field id exist it considers as an update
+otherwise it is a create action.</li>
+
+<li><strong>value</strong> - String - The value of the dsm parameter. Cannot be empty. Must be 8192 characters
+or less.</li>
+
+<li><strong>dsm_parameter_definition_id</strong> - Long - The id of the corresponding
+dsmparameterdefinition.</li>
+
+<li><strong>sensor_device_type_id</strong> - Long - The id of the corresponding sensordevicetype.</li>
+
+<li><strong>event_collector_id</strong> - Long - The id of the corresponding eventcollector component.</li>
+
+</ul>
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="PATCH /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. PATCH /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d273986e88" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d273986e88 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="PATCH /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. PATCH /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d273986e136" class="thbot">Parameter</th>
+
+<th id="d273986e139" class="thbot">Type</th>
+
+<th id="d273986e142" class="thbot">Optionality</th>
+
+<th id="d273986e145" class="thbot">Data Type</th>
+
+<th id="d273986e148" class="thbot">MIME Type</th>
+
+<th id="d273986e152" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d273986e136 "><p>Range</p>
+</td>
+
+<td headers="d273986e139 "><p>header</p>
+</td>
+
+<td headers="d273986e142 "><p>Optional</p>
+</td>
+
+<td headers="d273986e145 "><p>String</p>
+</td>
+
+<td headers="d273986e148 "><p>text/plain</p>
+</td>
+
+<td headers="d273986e152 "><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d273986e136 "><p>filter</p>
+</td>
+
+<td headers="d273986e139 "><p>header</p>
+</td>
+
+<td headers="d273986e142 "><p>Optional</p>
+</td>
+
+<td headers="d273986e145 "><p>String</p>
+</td>
+
+<td headers="d273986e148 "><p>text/plain</p>
+</td>
+
+<td headers="d273986e152 "><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d273986e136 "><p>fields</p>
+</td>
+
+<td headers="d273986e139 "><p>header</p>
+</td>
+
+<td headers="d273986e142 "><p>Optional</p>
+</td>
+
+<td headers="d273986e145 "><p>String</p>
+</td>
+
+<td headers="d273986e148 "><p>text/plain</p>
+</td>
+
+<td headers="d273986e152 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="PATCH /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. PATCH /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d273986e275" class="thbot">Parameter</th>
+
+<th id="d273986e278" class="thbot">Data Type</th>
+
+<th id="d273986e281" class="thbot">MIME Type</th>
+
+<th id="d273986e284" class="thbot">Description</th>
+
+<th id="d273986e287" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d273986e275 "><p>dsm_paramaters</p>
+</td>
+
+<td headers="d273986e278 "><p>Array&lt;Object&gt;</p>
+</td>
+
+<td headers="d273986e281 "><p>application/json</p>
+</td>
+
+<td headers="d273986e284 "><p>null</p>
+</td>
+
+<td headers="d273986e287 "><p>[
+    {
+        "dsm_parameter_definition_id": 42,
+        "event_collector_id": 42,
+        "id": 42,
+        "sensor_device_type_id": 42,
+        "value": "String"
+    }
+]</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="PATCH /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. PATCH /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d273986e344" class="thbot">HTTP Response Code</th>
+
+<th id="d273986e347" class="thbot">Unique Code</th>
+
+<th id="d273986e350" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d273986e344 "><p>207</p>
+</td>
+
+<td headers="d273986e347 "><p></p>
+</td>
+
+<td headers="d273986e350 "><p>The dsm parameters were created/updated successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d273986e344 "><p>422</p>
+</td>
+
+<td headers="d273986e347 "><p>1001</p>
+</td>
+
+<td headers="d273986e350 "><p>The provided dsm_parameter_definition_id is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d273986e344 "><p>422</p>
+</td>
+
+<td headers="d273986e347 "><p>1002</p>
+</td>
+
+<td headers="d273986e350 "><p>The provided event_collector_id is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d273986e344 "><p>422</p>
+</td>
+
+<td headers="d273986e347 "><p>1003</p>
+</td>
+
+<td headers="d273986e350 "><p>The provided sensor_device_type_id is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d273986e344 "><p>422</p>
+</td>
+
+<td headers="d273986e347 "><p>1004</p>
+</td>
+
+<td headers="d273986e350 "><p>The provided value is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d273986e344 "><p>422</p>
+</td>
+
+<td headers="d273986e347 "><p>1005</p>
+</td>
+
+<td headers="d273986e350 "><p>The provided dsm parameter id is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d273986e344 "><p>422</p>
+</td>
+
+<td headers="d273986e347 "><p>1006</p>
+</td>
+
+<td headers="d273986e350 "><p>A record with the same (dsm_parameter_definition_id, event_collector_id, sensor_device_type_id) already exists.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d273986e344 "><p>500</p>
+</td>
+
+<td headers="d273986e347 "><p>1020</p>
+</td>
+
+<td headers="d273986e350 "><p>An error occurred while attempting to create the dsm parameter.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d273986e484"><h2 class="sectiontitle" id="d273986e484">Response Description</h2>
+
+<div class="p">A list of the newly created or updated dsm parameters which will have the following fields:
+ <ul>
+ <li><strong>id</strong> - Long- The id of the created/updated dsm parameter.</li>
+
+ <li><strong>value</strong> - String - The value of the dsm parameter. Cannot be empty. Must be 8192 characters or less.</li>
+
+ <li><strong>dsm_parameter_definition</strong> - The corresponding dsm parameter definition object.</li>
+
+ <li><strong>sensor_device_type_id</strong> - Long - The id of the corresponding sensordevicetype.</li>
+
+ <li><strong>event_collector_id</strong> - Long - The id of the corresponding eventcollector component.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d273986e520"><h2 class="sectiontitle" id="d273986e520">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    {
+        "dsm_parameter_definition": {
+            "allowed_values": [
+                {
+                    "dsm_parameter_definition_id": 42,
+                    "id": 42,
+                    "name": "String",
+                    "sort_index": 42,
+                    "value": "String"
+                }
+            ],
+            "default_value": "String",
+            "description_localization_key": "String",
+            "id": 42,
+            "internal_name": "String",
+            "max_length": 42,
+            "max_value": 42,
+            "min_length": 42,
+            "min_value": 42,
+            "name_localization_key": "String",
+            "pattern": "String",
+            "pattern_description": "String",
+            "sort_index": 42,
+            "type": "String"
+        },
+        "event_collector_id": 42,
+        "id": 42,
+        "sensor_device_type_id": 42,
+        "value": "String"
+    }
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d273986e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version170_config_intro.html" title="Use the references for REST API 17.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

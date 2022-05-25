@@ -1,0 +1,361 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Update a dsm parameter by id.">
+<meta name="keywords" content="/config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="stylesheet" type="text/css" href="consolidation.css">
+<link rel="Start" href="c_rest_api_version170_config_intro.html">
+<title>POST /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id}</title>
+</head>
+<body id="api-17.0--config-event_sources-log_source_management-log_source_types-dsm_parameter_configuration-dsm_parameters-id-POST"><main role="main"><article role="article" aria-labelledby="d276776e10">
+<h1 class="topictitle1" id="d276776e10">POST /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Update a dsm parameter by id.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d276776e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d276776e60 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d276776e108" class="thbot">Parameter</th>
+
+<th id="d276776e111" class="thbot">Type</th>
+
+<th id="d276776e114" class="thbot">Optionality</th>
+
+<th id="d276776e117" class="thbot">Data Type</th>
+
+<th id="d276776e120" class="thbot">MIME Type</th>
+
+<th id="d276776e124" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d276776e108 "><p>id</p>
+</td>
+
+<td headers="d276776e111 "><p>path</p>
+</td>
+
+<td headers="d276776e114 "><p>Required</p>
+</td>
+
+<td headers="d276776e117 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d276776e120 "><p>text/plain</p>
+</td>
+
+<td headers="d276776e124 "><p>The ID of the dsm parameter to retrieve.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d276776e108 "><p>fields</p>
+</td>
+
+<td headers="d276776e111 "><p>header</p>
+</td>
+
+<td headers="d276776e114 "><p>Optional</p>
+</td>
+
+<td headers="d276776e117 "><p>String</p>
+</td>
+
+<td headers="d276776e120 "><p>text/plain</p>
+</td>
+
+<td headers="d276776e124 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d276776e219" class="thbot">Parameter</th>
+
+<th id="d276776e222" class="thbot">Data Type</th>
+
+<th id="d276776e225" class="thbot">MIME Type</th>
+
+<th id="d276776e228" class="thbot">Description</th>
+
+<th id="d276776e231" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d276776e219 "><p>dsm_paramaters</p>
+</td>
+
+<td headers="d276776e222 "><p>Object</p>
+</td>
+
+<td headers="d276776e225 "><p>application/json</p>
+</td>
+
+<td headers="d276776e228 "><p>null</p>
+</td>
+
+<td headers="d276776e231 "><p>{
+    "dsm_parameter_definition_id": 42,
+    "event_collector_id": 42,
+    "id": 42,
+    "sensor_device_type_id": 42,
+    "value": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/event_sources/log_source_management/log_source_types/dsm_parameter_configuration/dsm_parameters/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d276776e288" class="thbot">HTTP Response Code</th>
+
+<th id="d276776e291" class="thbot">Unique Code</th>
+
+<th id="d276776e294" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d276776e288 "><p>201</p>
+</td>
+
+<td headers="d276776e291 "><p></p>
+</td>
+
+<td headers="d276776e294 "><p>The log source type was created successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d276776e288 "><p>404</p>
+</td>
+
+<td headers="d276776e291 "><p>1026</p>
+</td>
+
+<td headers="d276776e294 "><p>The dsm parameter ID was not found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d276776e288 "><p>422</p>
+</td>
+
+<td headers="d276776e291 "><p>1021</p>
+</td>
+
+<td headers="d276776e294 "><p>The provided dsm_parameter_definition_id is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d276776e288 "><p>422</p>
+</td>
+
+<td headers="d276776e291 "><p>1022</p>
+</td>
+
+<td headers="d276776e294 "><p>The provided event_collector_id is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d276776e288 "><p>422</p>
+</td>
+
+<td headers="d276776e291 "><p>1023</p>
+</td>
+
+<td headers="d276776e294 "><p>The provided sensor_device_type_id is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d276776e288 "><p>422</p>
+</td>
+
+<td headers="d276776e291 "><p>1024</p>
+</td>
+
+<td headers="d276776e294 "><p>The provided value is not valid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d276776e288 "><p>422</p>
+</td>
+
+<td headers="d276776e291 "><p>1025</p>
+</td>
+
+<td headers="d276776e294 "><p>A record with the same (dsm_parameter_definition_id, event_collector_id, sensor_device_type_id) already exists.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d276776e288 "><p>500</p>
+</td>
+
+<td headers="d276776e291 "><p>1027</p>
+</td>
+
+<td headers="d276776e294 "><p>An error occurred during the attempt to update the dsm parameter.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d276776e428"><h2 class="sectiontitle" id="d276776e428">Response Description</h2>
+
+<div class="p">The result will have a list of the following fields:
+ <ul>
+ <li><strong>id</strong> - The id of the created dsm parameter.</li>
+
+ <li><strong>value</strong> - String - The value of the dsm parameter. Cannot be empty. Must be 8192 characters or less.</li>
+
+ <li><strong>dsm_parameter_definition</strong> - Long - The corresponding dsmparameterdefinition.</li>
+
+ <li><strong>sensor_device_type_id</strong> - Long - The id of the corresponding sensordevicetype.</li>
+
+ <li><strong>event_collector_id</strong> - Long - The id of the corresponding eventcollector component.</li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d276776e464"><h2 class="sectiontitle" id="d276776e464">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "dsm_parameter_definition": {
+        "allowed_values": [
+            {
+                "dsm_parameter_definition_id": 42,
+                "id": 42,
+                "name": "String",
+                "sort_index": 42,
+                "value": "String"
+            }
+        ],
+        "default_value": "String",
+        "description_localization_key": "String",
+        "id": 42,
+        "internal_name": "String",
+        "max_length": 42,
+        "max_value": 42,
+        "min_length": 42,
+        "min_value": 42,
+        "name_localization_key": "String",
+        "pattern": "String",
+        "pattern_description": "String",
+        "sort_index": 42,
+        "type": "String"
+    },
+    "event_collector_id": 42,
+    "id": 42,
+    "sensor_device_type_id": 42,
+    "value": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d276776e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version170_config_intro.html" title="Use the references for REST API 17.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

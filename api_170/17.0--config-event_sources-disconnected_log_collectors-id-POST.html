@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates a disconnected log collector by ID.">
+<meta name="keywords" content="/config/event_sources/disconnected_log_collectors/{id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="stylesheet" type="text/css" href="consolidation.css">
+<link rel="Start" href="c_rest_api_version170_config_intro.html">
+<title>POST /config/event_sources/disconnected_log_collectors/{id}</title>
+</head>
+<body id="api-17.0--config-event_sources-disconnected_log_collectors-id-POST"><main role="main"><article role="article" aria-labelledby="d52002e10">
+<h1 class="topictitle1" id="d52002e10">POST /config/event_sources/disconnected_log_collectors/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates a disconnected log collector by ID. </p>
+
+<div class="section refsyn">A disconnected log collector contains the following fields: <ul>
+<li><strong>id</strong> - ID - The ID of the disconnected log collector.</li>
+
+<li><strong>uuid</strong> - UUID - The UUID of the disconnected log collector.</li>
+
+<li><strong>name</strong> - String - The name of the Disconnected Log Collector.</li>
+
+<li><strong>description</strong> - String - The description of the Disconnected Log Collector.</li>
+
+<li><strong>version</strong> - String - The version of the Disconnected Log Collector.</li>
+
+<li><strong>protocol</strong> - Enumeration - The transport protocol used by the Disconnected Log Collector to
+send events to QRadar. Possible Values are TLS and UDP.</li>
+
+</ul>
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/disconnected_log_collectors/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/event_sources/disconnected_log_collectors/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d52002e94" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d52002e94 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/disconnected_log_collectors/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/event_sources/disconnected_log_collectors/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d52002e142" class="thbot">Parameter</th>
+
+<th id="d52002e145" class="thbot">Type</th>
+
+<th id="d52002e148" class="thbot">Optionality</th>
+
+<th id="d52002e151" class="thbot">Data Type</th>
+
+<th id="d52002e154" class="thbot">MIME Type</th>
+
+<th id="d52002e158" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d52002e142 "><p>id</p>
+</td>
+
+<td headers="d52002e145 "><p>path</p>
+</td>
+
+<td headers="d52002e148 "><p>Required</p>
+</td>
+
+<td headers="d52002e151 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d52002e154 "><p>text/plain</p>
+</td>
+
+<td headers="d52002e158 "><p>The ID of the disconnected log collector to update.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d52002e142 "><p>fields</p>
+</td>
+
+<td headers="d52002e145 "><p>header</p>
+</td>
+
+<td headers="d52002e148 "><p>Optional</p>
+</td>
+
+<td headers="d52002e151 "><p>String</p>
+</td>
+
+<td headers="d52002e154 "><p>text/plain</p>
+</td>
+
+<td headers="d52002e158 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/disconnected_log_collectors/{id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/event_sources/disconnected_log_collectors/{id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d52002e253" class="thbot">Parameter</th>
+
+<th id="d52002e256" class="thbot">Data Type</th>
+
+<th id="d52002e259" class="thbot">MIME Type</th>
+
+<th id="d52002e262" class="thbot">Description</th>
+
+<th id="d52002e265" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d52002e253 "><p>log_source_data</p>
+</td>
+
+<td headers="d52002e256 "><p>Object</p>
+</td>
+
+<td headers="d52002e259 "><p>application/json</p>
+</td>
+
+<td headers="d52002e262 "><p>The updated disconnected log collector data.  Any field not provided will be ignored.</p>
+</td>
+
+<td headers="d52002e265 "><p>{
+    "description": "String",
+    "name": "String",
+    "protocol": "String",
+    "uuid": "String",
+    "version": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/event_sources/disconnected_log_collectors/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /config/event_sources/disconnected_log_collectors/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d52002e322" class="thbot">HTTP Response Code</th>
+
+<th id="d52002e325" class="thbot">Unique Code</th>
+
+<th id="d52002e328" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d52002e322 "><p>200</p>
+</td>
+
+<td headers="d52002e325 "><p></p>
+</td>
+
+<td headers="d52002e328 "><p>The disconnected log collector was updated successfully.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d52002e322 "><p>404</p>
+</td>
+
+<td headers="d52002e325 "><p>1001</p>
+</td>
+
+<td headers="d52002e328 "><p>The requested disconnected log collector cannot be found.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d52002e322 "><p>409</p>
+</td>
+
+<td headers="d52002e325 "><p>1002</p>
+</td>
+
+<td headers="d52002e328 "><p>The 'uuid' parameter must be unique.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d52002e322 "><p>409</p>
+</td>
+
+<td headers="d52002e325 "><p>1005</p>
+</td>
+
+<td headers="d52002e328 "><p>The 'name' parameter must be unique.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d52002e322 "><p>422</p>
+</td>
+
+<td headers="d52002e325 "><p>1003</p>
+</td>
+
+<td headers="d52002e328 "><p>The 'uuid' parameter format is invalid.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d52002e322 "><p>422</p>
+</td>
+
+<td headers="d52002e325 "><p>1004</p>
+</td>
+
+<td headers="d52002e328 "><p>The 'uuid' parameter is required.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d52002e322 "><p>422</p>
+</td>
+
+<td headers="d52002e325 "><p>1006</p>
+</td>
+
+<td headers="d52002e328 "><p>The 'name' parameter is required.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d52002e322 "><p>422</p>
+</td>
+
+<td headers="d52002e325 "><p>1007</p>
+</td>
+
+<td headers="d52002e328 "><p>The 'name' parameter must not exceed 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d52002e322 "><p>422</p>
+</td>
+
+<td headers="d52002e325 "><p>1008</p>
+</td>
+
+<td headers="d52002e328 "><p>The 'description' parameter must not exceed 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d52002e322 "><p>422</p>
+</td>
+
+<td headers="d52002e325 "><p>1009</p>
+</td>
+
+<td headers="d52002e328 "><p>The 'version' parameter is required.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d52002e322 "><p>422</p>
+</td>
+
+<td headers="d52002e325 "><p>1010</p>
+</td>
+
+<td headers="d52002e328 "><p>The 'version' parameter must not exceed 255 characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d52002e322 "><p>422</p>
+</td>
+
+<td headers="d52002e325 "><p>1011</p>
+</td>
+
+<td headers="d52002e328 "><p>The 'protocol' parameter must be TLS or UDP.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d52002e322 "><p>500</p>
+</td>
+
+<td headers="d52002e325 "><p>1100</p>
+</td>
+
+<td headers="d52002e328 "><p>An error occurred during the attempt to create the disconnected log collector.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d52002e538"><h2 class="sectiontitle" id="d52002e538">Response Description</h2>
+
+<p>The updated disconnected log collector identified by the id specified in the request.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d52002e547"><h2 class="sectiontitle" id="d52002e547">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "description": "String",
+    "id": 42,
+    "name": "String",
+    "protocol": "String",
+    "uuid": "String",
+    "version": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d52002e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version170_config_intro.html" title="Use the references for REST API 17.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>
