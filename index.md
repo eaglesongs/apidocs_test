@@ -1,6 +1,6 @@
 # REST API Version 17.0
 
-*   [What's new in REST API Version 17.0](api_170/c_rest_api_whats_new_170.md)
+*   [What's new in REST API Version 17.0](api_170/c_rest_api_whats_new_170.html)
 *   [access endpoints](api_170/c_rest_api_version170_access_intro.md)
     *   [GET /access/login\_attempts](api_170/17.0--access-login_attempts-GET.md)
 *   [analytics endpoints](api_170/c_rest_api_version170_analytics_intro.md)
