@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Gets a list of end certificate IDs that depend on the root certificate. This endpoint might not return the dependent IDs of the certificates that were uploaded in the last 24 hours. You must have System Administrator or Security Administrator permissions to use this endpoint.">
+<meta name="keywords" content="/config/certificates/root_certificates/{id}/get_dependant_ids, GET, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="stylesheet" type="text/css" href="consolidation.css">
+<link rel="Start" href="c_rest_api_version170_config_intro.html">
+<title>GET /config/certificates/root_certificates/{id}/get_dependant_ids</title>
+</head>
+<body id="api-17.0--config-certificates-root_certificates-id-get_dependant_ids-GET"><main role="main"><article role="article" aria-labelledby="d103540e10">
+<h1 class="topictitle1" id="d103540e10">GET /config/certificates/root_certificates/{id}/get_dependant_ids</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Gets a list of end certificate IDs that depend on the root certificate. This endpoint
+might not return the dependent IDs of the certificates that were uploaded in the last 24 hours. You
+must have System Administrator or Security Administrator permissions to use this
+endpoint.</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/certificates/root_certificates/{id}/get_dependant_ids resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. GET /config/certificates/root_certificates/{id}/get_dependant_ids resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d103540e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d103540e60 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/certificates/root_certificates/{id}/get_dependant_ids request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. GET /config/certificates/root_certificates/{id}/get_dependant_ids request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d103540e108" class="thbot">Parameter</th>
+
+<th id="d103540e111" class="thbot">Type</th>
+
+<th id="d103540e114" class="thbot">Optionality</th>
+
+<th id="d103540e117" class="thbot">Data Type</th>
+
+<th id="d103540e120" class="thbot">MIME Type</th>
+
+<th id="d103540e124" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d103540e108 "><p>id</p>
+</td>
+
+<td headers="d103540e111 "><p>path</p>
+</td>
+
+<td headers="d103540e114 "><p>Required</p>
+</td>
+
+<td headers="d103540e117 "><p>String</p>
+</td>
+
+<td headers="d103540e120 "><p>text/plain</p>
+</td>
+
+<td headers="d103540e124 "><div class="p">
+<ul>
+<li><strong>id</strong> - The ID of the root certificate for which to get the dependant certificate IDs. This
+value is derived from subject_key_id.</li>
+
+</ul>
+
+</div>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="GET /config/certificates/root_certificates/{id}/get_dependant_ids response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. GET /config/certificates/root_certificates/{id}/get_dependant_ids response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d103540e194" class="thbot">HTTP Response Code</th>
+
+<th id="d103540e197" class="thbot">Unique Code</th>
+
+<th id="d103540e200" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d103540e194 "><p>200</p>
+</td>
+
+<td headers="d103540e197 "><p></p>
+</td>
+
+<td headers="d103540e200 "><p>An array of the certificate IDs.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d103540e194 "><p>404</p>
+</td>
+
+<td headers="d103540e197 "><p>1002</p>
+</td>
+
+<td headers="d103540e200 "><p>null</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d103540e194 "><p>500</p>
+</td>
+
+<td headers="d103540e197 "><p>1020</p>
+</td>
+
+<td headers="d103540e200 "><p>Not able to return the certificate collection.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d103540e257"><h2 class="sectiontitle" id="d103540e257">Response Description</h2>
+
+<p>A JSON array that contains the IDs of the dependant certificates.</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d103540e267"><h2 class="sectiontitle" id="d103540e267">Response Sample</h2>
+
+<pre class="codeblock"><code>
+[
+    42
+]
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d103540e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version170_config_intro.html" title="Use the references for REST API 17.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>
