@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Removes the active configuration for the specified ID from the system.">
+<meta name="keywords" content="/config/flow/common_destination_ports/active_configurations/{id}, DELETE, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="stylesheet" type="text/css" href="consolidation.css">
+<link rel="Start" href="c_rest_api_version170_config_intro.html">
+<title>DELETE /config/flow/common_destination_ports/active_configurations/{id}</title>
+</head>
+<body id="api-17.0--config-flow-common_destination_ports-active_configurations-id-DELETE"><main role="main"><article role="article" aria-labelledby="d249756e10">
+<h1 class="topictitle1" id="d249756e10">DELETE /config/flow/common_destination_ports/active_configurations/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Removes the active configuration for the specified ID from the system.</p>
+
+<div class="section refsyn">
+<p>Removes the active configuration for the specified ID from the system.
+ 
+ You must have System Administrator or Security Admin permissions to use this endpoint.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /config/flow/common_destination_ports/active_configurations/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. DELETE /config/flow/common_destination_ports/active_configurations/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d249756e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d249756e64 "><p>text/plain
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /config/flow/common_destination_ports/active_configurations/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. DELETE /config/flow/common_destination_ports/active_configurations/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d249756e112" class="thbot">Parameter</th>
+
+<th id="d249756e115" class="thbot">Type</th>
+
+<th id="d249756e118" class="thbot">Optionality</th>
+
+<th id="d249756e121" class="thbot">Data Type</th>
+
+<th id="d249756e124" class="thbot">MIME Type</th>
+
+<th id="d249756e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d249756e112 "><p>id</p>
+</td>
+
+<td headers="d249756e115 "><p>path</p>
+</td>
+
+<td headers="d249756e118 "><p>Required</p>
+</td>
+
+<td headers="d249756e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d249756e124 "><p>text/plain</p>
+</td>
+
+<td headers="d249756e128 "><p>The ID of the active configuration to delete.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /config/flow/common_destination_ports/active_configurations/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. DELETE /config/flow/common_destination_ports/active_configurations/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d249756e190" class="thbot">HTTP Response Code</th>
+
+<th id="d249756e193" class="thbot">Unique Code</th>
+
+<th id="d249756e196" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d249756e190 "><p>204</p>
+</td>
+
+<td headers="d249756e193 "><p></p>
+</td>
+
+<td headers="d249756e196 "><p>Successful delete.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d249756e190 "><p>404</p>
+</td>
+
+<td headers="d249756e193 "><p>5000</p>
+</td>
+
+<td headers="d249756e196 "><p>A active configuration for the specified port number does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d249756e190 "><p>500</p>
+</td>
+
+<td headers="d249756e193 "><p>1020</p>
+</td>
+
+<td headers="d249756e196 "><p>An error occurred while deleting active Common Destination Port Configuration.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d249756e253"><h2 class="sectiontitle" id="d249756e253">Response Description</h2>
+
+<p></p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d249756e262"><h2 class="sectiontitle" id="d249756e262">Response Sample</h2>
+
+<pre class="codeblock"><code>
+
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d249756e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version170_config_intro.html" title="Use the references for REST API 17.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

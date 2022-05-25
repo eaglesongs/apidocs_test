@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Perform asynchronous test Resilient connection">
+<meta name="keywords" content="/config/resilient/test, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="stylesheet" type="text/css" href="consolidation.css">
+<link rel="Start" href="c_rest_api_version170_config_intro.html">
+<title>POST /config/resilient/test</title>
+</head>
+<body id="api-17.0--config-resilient-test-POST"><main role="main"><article role="article" aria-labelledby="d164437e10">
+<h1 class="topictitle1" id="d164437e10">POST /config/resilient/test</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Perform asynchronous test Resilient connection</p>
+
+<div class="section refsyn"></div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/resilient/test resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /config/resilient/test resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d164437e60" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d164437e60 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/resilient/test request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /config/resilient/test request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d164437e108" class="thbot">Parameter</th>
+
+<th id="d164437e111" class="thbot">Type</th>
+
+<th id="d164437e114" class="thbot">Optionality</th>
+
+<th id="d164437e117" class="thbot">Data Type</th>
+
+<th id="d164437e120" class="thbot">MIME Type</th>
+
+<th id="d164437e124" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d164437e108 "><p>fields</p>
+</td>
+
+<td headers="d164437e111 "><p>query</p>
+</td>
+
+<td headers="d164437e114 "><p>Optional</p>
+</td>
+
+<td headers="d164437e117 "><p>String</p>
+</td>
+
+<td headers="d164437e120 "><p>text/plain</p>
+</td>
+
+<td headers="d164437e124 "><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /config/resilient/test response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /config/resilient/test response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d164437e186" class="thbot">HTTP Response Code</th>
+
+<th id="d164437e189" class="thbot">Unique Code</th>
+
+<th id="d164437e192" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d164437e186 "><p>201</p>
+</td>
+
+<td headers="d164437e189 "><p></p>
+</td>
+
+<td headers="d164437e192 "><p>The Resilient Connection Test was started.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d164437e186 "><p>404</p>
+</td>
+
+<td headers="d164437e189 "><p>1002</p>
+</td>
+
+<td headers="d164437e192 "><p>The connection configuration for Resilient was not defined.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d164437e186 "><p>409</p>
+</td>
+
+<td headers="d164437e189 "><p>1004</p>
+</td>
+
+<td headers="d164437e192 "><p>There is another test already running.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d164437e186 "><p>500</p>
+</td>
+
+<td headers="d164437e189 "><p>1020</p>
+</td>
+
+<td headers="d164437e192 "><p>An error occurred while trying to run a test.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d164437e186 "><p>500</p>
+</td>
+
+<td headers="d164437e189 "><p>1022</p>
+</td>
+
+<td headers="d164437e192 "><p>Timeout while performing the task.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d164437e279"><h2 class="sectiontitle" id="d164437e279">Response Description</h2>
+
+<p>Response code and the task status for this Resilient Connection Test request</p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d164437e289"><h2 class="sectiontitle" id="d164437e289">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "completed": 42,
+    "created": 42,
+    "created_by": "String",
+    "error_code": 42,
+    "error_message": "String",
+    "id": 42,
+    "modified": 42,
+    "name": "String",
+    "started": 42,
+    "status": "String &lt;one of: CANCELLED, CANCELING, CANCEL_REQUESTED, COMPLETED, CONFLICT, EXCEPTION, INITIALIZING, INTERRUPTED, PAUSED, PROCESSING, QUEUED, RESUMING&gt;"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d164437e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version170_config_intro.html" title="Use the references for REST API 17.0 config endpoints.">config endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>
