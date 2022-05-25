@@ -1,0 +1,287 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Updates a category for tagged fields. To use this endpoint, you must have System Administrator or Security Admin permissions.">
+<meta name="keywords" content="/ariel/taggedfieldcategories/{id}, POST, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="stylesheet" type="text/css" href="consolidation.css">
+<link rel="Start" href="c_rest_api_version170_ariel_intro.html">
+<title>POST /ariel/taggedfieldcategories/{id}</title>
+</head>
+<body id="api-17.0--ariel-taggedfieldcategories-id-POST"><main role="main"><article role="article" aria-labelledby="d142098e10">
+<h1 class="topictitle1" id="d142098e10">POST /ariel/taggedfieldcategories/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Updates a category for tagged fields. To use this endpoint, you must have System Administrator or Security Admin permissions.</p>
+
+<div class="section refsyn">
+<p>Updates a category for tagged fields.
+ 
+ To use this endpoint, you must have System Administrator or Security Admin permissions.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/taggedfieldcategories/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. POST /ariel/taggedfieldcategories/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d142098e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d142098e64 "><p>application/json
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/taggedfieldcategories/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. POST /ariel/taggedfieldcategories/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d142098e112" class="thbot">Parameter</th>
+
+<th id="d142098e115" class="thbot">Type</th>
+
+<th id="d142098e118" class="thbot">Optionality</th>
+
+<th id="d142098e121" class="thbot">Data Type</th>
+
+<th id="d142098e124" class="thbot">MIME Type</th>
+
+<th id="d142098e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d142098e112 "><p>id</p>
+</td>
+
+<td headers="d142098e115 "><p>path</p>
+</td>
+
+<td headers="d142098e118 "><p>Required</p>
+</td>
+
+<td headers="d142098e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d142098e124 "><p>text/plain</p>
+</td>
+
+<td headers="d142098e128 "><p>The ID of the category that you want to update.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/taggedfieldcategories/{id} request body details" class="defaultstyle"><caption><span class="tablecap">Table 3. POST /ariel/taggedfieldcategories/{id} request body details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d142098e195" class="thbot">Parameter</th>
+
+<th id="d142098e198" class="thbot">Data Type</th>
+
+<th id="d142098e201" class="thbot">MIME Type</th>
+
+<th id="d142098e204" class="thbot">Description</th>
+
+<th id="d142098e207" class="thbot">Sample</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d142098e195 "><p>body</p>
+</td>
+
+<td headers="d142098e198 "><p>Object</p>
+</td>
+
+<td headers="d142098e201 "><p>application/json</p>
+</td>
+
+<td headers="d142098e204 "><div class="p">The updated structure for the category. Only the name field can be set when updating a category. All other fields are ignored.
+ <ul>
+ <li><strong>name</strong> - String - The name of the category for tagged fields.</li>
+
+ </ul>
+</div>
+</td>
+
+<td headers="d142098e207 "><p>{
+    "name": "String"
+}</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="POST /ariel/taggedfieldcategories/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 4. POST /ariel/taggedfieldcategories/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d142098e271" class="thbot">HTTP Response Code</th>
+
+<th id="d142098e274" class="thbot">Unique Code</th>
+
+<th id="d142098e277" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d142098e271 "><p>200</p>
+</td>
+
+<td headers="d142098e274 "><p></p>
+</td>
+
+<td headers="d142098e277 "><p>The category was updated.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d142098e271 "><p>404</p>
+</td>
+
+<td headers="d142098e274 "><p>7000</p>
+</td>
+
+<td headers="d142098e277 "><p>The specified ID does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d142098e271 "><p>409</p>
+</td>
+
+<td headers="d142098e274 "><p>7001</p>
+</td>
+
+<td headers="d142098e277 "><p>A category already exists with the specified name.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d142098e271 "><p>422</p>
+</td>
+
+<td headers="d142098e274 "><p>7002</p>
+</td>
+
+<td headers="d142098e277 "><p>The specified name must be between 1 and 255 (inclusive) characters.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d142098e271 "><p>500</p>
+</td>
+
+<td headers="d142098e274 "><p>1027</p>
+</td>
+
+<td headers="d142098e277 "><p>An error occurred while updating the category.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d142098e365"><h2 class="sectiontitle" id="d142098e365">Response Description</h2>
+
+<div class="p">The updated category with the specified ID. A category object contains the following fields:
+ <ul>
+ <li><strong>id</strong> - Long - The ID of the category for tagged fields.</li>
+
+ <li><strong>name</strong> - String - The name of the category for tagged fields.</li>
+
+ <li><strong>uuid</strong> - String - The ID of the category for tagged fields, represented as a UUID.</li>
+
+ <li><strong>modified_date</strong> - Long - The time stamp that the category was last modified, specified in milliseconds since epoch.</li>
+
+ <li><strong>creation_date</strong> - Long - The time stamp that the category was created, specified in milliseconds since epoch. </li>
+
+ </ul>
+</div>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d142098e401"><h2 class="sectiontitle" id="d142098e401">Response Sample</h2>
+
+<pre class="codeblock"><code>
+{
+    "creation_date": 42,
+    "id": 42,
+    "modified_date": 42,
+    "name": "String",
+    "uuid": "String"
+}
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d142098e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version170_ariel_intro.html" title="Use the references for REST API 17.0 ariel endpoints.">ariel endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>

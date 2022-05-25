@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+<meta name="dcterms.rights" content="© Copyright IBM Corporation 2022">
+
+
+
+<meta name="description" content="Removes the category for tagged fields from the system. To use this endpoint, you must have System Administrator or Security Admin permissions.">
+<meta name="keywords" content="/ariel/taggedfieldcategories/{id}, DELETE, API, REST API">
+<meta name="geo.country" content="ZZ">
+<script>
+    digitalData = {
+      page: {
+        pageInfo: {
+  language: "en-us",
+
+  version: "v18",
+  ibm: {
+  country: "ZZ",
+  type: "CT701"
+  
+         }
+       }
+     }
+   };
+  </script><!-- Licensed Materials - Property of IBM -->
+<!-- US Government Users Restricted Rights -->
+<!-- Use, duplication or disclosure restricted by -->
+<!-- GSA ADP Schedule Contract with IBM Corp. -->
+<link rel="stylesheet" type="text/css" href="ibmdita.css">
+<link rel="stylesheet" type="text/css" href="consolidation.css">
+<link rel="Start" href="c_rest_api_version170_ariel_intro.html">
+<title>DELETE /ariel/taggedfieldcategories/{id}</title>
+</head>
+<body id="api-17.0--ariel-taggedfieldcategories-id-DELETE"><main role="main"><article role="article" aria-labelledby="d49012e10">
+<h1 class="topictitle1" id="d49012e10">DELETE /ariel/taggedfieldcategories/{id}</h1>
+
+
+
+<div class="body refbody"><p class="shortdesc">Removes the category for tagged fields from the system. To use this endpoint, you must have System Administrator or Security Admin permissions.</p>
+
+<div class="section refsyn">
+<p>Removes the category for tagged fields from the system.
+ 
+ To use this endpoint, you must have System Administrator or Security Admin permissions.</p>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /ariel/taggedfieldcategories/{id} resource details" class="defaultstyle"><caption><span class="tablecap">Table 1. DELETE /ariel/taggedfieldcategories/{id} resource details</span></caption><colgroup><col style="width:100%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d49012e64" class="thbot">MIME Type</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d49012e64 "><p>text/plain
+</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /ariel/taggedfieldcategories/{id} request parameter details" class="defaultstyle"><caption><span class="tablecap">Table 2. DELETE /ariel/taggedfieldcategories/{id} request parameter details</span></caption><colgroup><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:14.285714285714285%"><col style="width:28.57142857142857%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d49012e112" class="thbot">Parameter</th>
+
+<th id="d49012e115" class="thbot">Type</th>
+
+<th id="d49012e118" class="thbot">Optionality</th>
+
+<th id="d49012e121" class="thbot">Data Type</th>
+
+<th id="d49012e124" class="thbot">MIME Type</th>
+
+<th id="d49012e128" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d49012e112 "><p>id</p>
+</td>
+
+<td headers="d49012e115 "><p>path</p>
+</td>
+
+<td headers="d49012e118 "><p>Required</p>
+</td>
+
+<td headers="d49012e121 "><p>Number (Integer)</p>
+</td>
+
+<td headers="d49012e124 "><p>text/plain</p>
+</td>
+
+<td headers="d49012e128 "><p>The ID of the category that you want to remove.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="section refsyn">
+
+<div class="tablenoborder"><table summary="DELETE /ariel/taggedfieldcategories/{id} response codes" class="defaultstyle"><caption><span class="tablecap">Table 3. DELETE /ariel/taggedfieldcategories/{id} response codes</span></caption><colgroup><col style="width:20%"><col style="width:20%"><col style="width:60%"></colgroup><thead style="text-align:left;">
+<tr style="vertical-align:bottom;">
+<th id="d49012e190" class="thbot">HTTP Response Code</th>
+
+<th id="d49012e193" class="thbot">Unique Code</th>
+
+<th id="d49012e196" class="thbot">Description</th>
+
+</tr>
+
+</thead>
+<tbody>
+<tr>
+<td headers="d49012e190 "><p>204</p>
+</td>
+
+<td headers="d49012e193 "><p></p>
+</td>
+
+<td headers="d49012e196 "><p>The category was successfully deleted.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d49012e190 "><p>404</p>
+</td>
+
+<td headers="d49012e193 "><p>9000</p>
+</td>
+
+<td headers="d49012e196 "><p>The specified ID does not exist.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d49012e190 "><p>422</p>
+</td>
+
+<td headers="d49012e193 "><p>9001</p>
+</td>
+
+<td headers="d49012e196 "><p>You cannot delete the category because it is used by existing tagged fields.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d49012e190 "><p>422</p>
+</td>
+
+<td headers="d49012e193 "><p>9002</p>
+</td>
+
+<td headers="d49012e196 "><p>You cannot delete the default category.</p>
+</td>
+
+</tr>
+
+<tr>
+<td headers="d49012e190 "><p>500</p>
+</td>
+
+<td headers="d49012e193 "><p>1029</p>
+</td>
+
+<td headers="d49012e196 "><p>An error occurred while deleting the category.</p>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<section class="section refsyn" role="region" aria-labelledby="d49012e283"><h2 class="sectiontitle" id="d49012e283">Response Description</h2>
+
+<p></p>
+
+</section>
+
+<section class="section refsyn" role="region" aria-labelledby="d49012e292"><h2 class="sectiontitle" id="d49012e292">Response Sample</h2>
+
+<pre class="codeblock"><code>
+
+</code></pre>
+</section>
+
+</div>
+
+<aside role="complementary" aria-labelledby="d49012e10"><nav role="navigation">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a href="c_rest_api_version170_ariel_intro.html" title="Use the references for REST API 17.0 ariel endpoints.">ariel endpoints</a></div>
+</div>
+</nav></aside></article></main></body></html>
