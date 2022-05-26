@@ -1,11 +1,5 @@
 # REST API Version 17.0
 
-## YML test
-*   [Config](yml/_config.yml)
-*   [conref_scp](yml/conref_scp.yml)
-*   [mkdocs](yml/mkdocs.yml)
-
-## HTML test
 *   [What's new in REST API Version 17.0](api_170/c_rest_api_whats_new_170.html)
 *   [access endpoints](api_170/c_rest_api_version170_access_intro.html)
     *   [GET /access/login\_attempts](api_170/17.0--access-login_attempts-GET.html)
