@@ -1,0 +1,5 @@
+site_name: QRadar App Framework
+theme:
+  name: material
+markdown_extensions:
+  - codehilite

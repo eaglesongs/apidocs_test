@@ -1,0 +1,495 @@
+#IBM Security Cloud conref equivalent file to conrefs.dita
+#Best Practices and translation considerations: Do
+
+  #Conrefs can be used for IBM product names or other trademarks.
+  #Conrefs can be used for UI labels, but should contain the label only, no surrounding text.
+    #When these UI labels map directly to strings used in PII, this can actually simplify translation and DVT.
+    #Make sure you use the entire label in the single conref definition
+    #and that you only ever use this conref reference when talking about the UI label.
+    #Even if the words might be valid in another context, the translation of that label may not fit correctly in different contexts.
+  #Conrefs can be used for websites addresses or URLs,
+  #formal titles of documents or chapters.
+  #Conrefs can be used for full sentences.
+    #Easy to translate because the translator can see the full thought and has flexibility needed to restructure and contextualize.
+  #Conrefs can be used for full block elements, like a complete paragraphs or topics that stands by themselves.
+
+
+#//Do not translate - Begin
+
+keyword:
+  isc:
+    IBM Cloud Pak&reg; for Security
+  isc_short:
+    Cloud Pak for Security
+  isc_notm:
+    IBM Cloud Pak for Security
+
+#Service names / Onboarded applications
+
+#//AAA
+
+#//BBB
+
+#//CCC
+  car:
+    Connected Assets and Risk
+  ci_full:
+    IBM&reg; Cloud Identity
+  ci_full_notm:
+    IBM Cloud Identity
+  ci_short:
+    Cloud Identity
+  cp_full:
+    IBM Cloud Pak&reg; foundational services
+  cp_full_notm:
+    IBM Cloud Pak foundational services
+  ibm_cloud_full:
+    IBM Cloud&reg;
+  ibm_cloud_full_notm:
+    IBM Cloud
+  cloudpak_full:
+    IBM Cloud Pak&reg;
+  cloudpak_full_notm:
+    IBM Cloud Pak
+  cloudpak_short:
+    Cloud Pak
+
+
+#//DDD
+  data_source_1:
+    QRadar
+  data_source_1_notm:
+    IBM QRadar
+  data_source_1_full:
+    IBM&reg; QRadar&reg;
+  data_source_1_version:
+    7.3.3
+  data_source_2:
+    QRadar on Cloud
+  data_source_2_full:
+    IBM&reg; QRadar&reg; on Cloud
+  data_source_3:
+    BigFix
+  data_source_3_full:
+    HCL BigFix
+  data_source_3_version:
+    9.5
+  data_source_4_full:
+    Splunk Enterprise Security
+  data_source_4:
+    Splunk
+  data_source_4_version:
+    6.5.0 - 7.1.2
+  data_source_5:
+    CB Response
+  data_source_5_full:
+    Carbon Black CB Response
+  data_source_5_version:
+    7.3.0
+  data_source_6:
+    Elasticsearch
+  data_source_6_full:
+    Elasticsearch
+  data_source_6_version:
+    1.7
+  data_source_7:
+    Microsoft Defender ATP
+  data_source_7_full:
+    Microsoft Defender Advanced Threat Protection
+  data_source_8_short:
+    IBM Cloud Security Advisor
+  data_source_8_notm:
+    IBM Cloud Security Advisor
+  data_source_8_full:
+    IBM Cloud&reg; Security Advisor
+  data_source_9:
+    Guardium
+  data_source_9_full:
+    IBM&reg; Security Guardium
+  data_source_9_version:
+    11.3
+  data_source_10:
+    CloudWatch
+  data_source_10_full:
+    Amazon CloudWatch
+  data_source_11:
+    Azure Sentinel
+  data_source_11_full:
+    Microsoft Azure Sentinel
+  data_source_12:
+    Tenable
+  data_source_12_full:
+    Tenable
+  data_source_13:
+    Verify
+  data_source_13_full:
+    IBM&reg; Security Verify
+  data_source_14:
+    Azure
+  data_source_14_full:
+    Microsoft Azure
+  data_source_15:
+    AWS
+  data_source_15_full:
+    Amazon Web Services
+  data_source_16:
+    Data Risk Manager
+  data_source_16_full:
+    IBM&reg; Data Risk Manager
+  data_source_16_version:
+    2.0.6.7
+  data_source_17:
+    Amazon Athena
+  data_source_17_full:
+    Amazon Athena
+  data_source_18:
+    ArcSight
+  data_source_18_full:
+    Micro Focus ArcSight
+  data_source_18_version:
+    7.1
+  data_source_19:
+    Carbon Black Cloud
+
+
+#//EEE
+
+#//FFF
+
+#//GGG
+
+#//HHH
+
+#//III
+  investigate_full:
+    IBM&reg; Security Data Explorer
+  investigate_notm:
+    IBM Security Data Explorer
+  investigate:
+    Data Explorer
+  ibm_kc:
+    IBM Knowledge Center
+
+#//JJJ
+
+#//KKK
+
+#//LLL
+
+#//MMM
+
+#//NNN
+
+#//OOO
+
+#//PPP
+  ppa_full:
+    IBM&reg; Passport Advantage
+  ppa_notm:
+    IBM Passport Advantage
+  ppa_short:
+    Passport Advantage
+
+#//QQQ
+  qrp:
+    QRadar Proxy
+  qrp_tm:
+    IBM&reg; QRadar&reg; Proxy
+
+#//RRR
+  respond:
+    Case Management
+  respond_notm:
+    IBM Security Case Management
+  respond_full:
+    IBM&reg; Security Case Management
+  resilient_cp4s:
+    Orchestration & Automation
+  resilient_cp4s_notm:
+    IBM Security Orchestration & Automation
+  resilient_cp4s_full:
+    IBM&reg; Security Orchestration & Automation
+  resilient_full:
+    IBM&reg; Resilient&reg; Security Orchestration, Automation, and Response (SOAR) Platform
+  resilient_notm:
+    IBM Resilient Security Orchestration, Automation, and Response Platform
+  resilient_short:
+    Resilient SOAR Platform
+  resilient:
+    Resilient
+  rhocp_short:
+    Red Hat OpenShift
+  rhocp_full:
+    Red Hat OpenShift Container Platform
+  rhocp_tm:
+    Red Hat&reg; OpenShift&reg; Container Platform
+  rhocp_vshort:
+    OpenShift
+  rhel_full:
+    Red Hat Enterprise Linux
+  rhcos_full:
+    Red Hat Enterprise Linux CoreOS
+  risk:
+    Risk Manager
+  risk_notm:
+    IBM Security Risk Manager
+  risk_tm:
+    IBM&reg; Security Risk Manager
+
+#//SSS
+  solution_threat:
+    Threat Ops
+
+#//TTT
+  threat_dashboard:
+    Threat Ops
+  threat_investigate:
+    Threat Investigator 
+  threat_investigate_full:
+    IBM&reg; Security Threat Investigator 
+  threat_investigate_notm:
+    IBM Security Threat Investigator 
+
+#//UUU
+  uds:
+    Universal Data Insights
+  url_readme_found:
+    https://github.com/IBM/charts/tree/master/entitled/ibm-security-foundations-prod/README.md
+  url_readme_solns:
+    https://github.com/IBM/charts/tree/master/entitled/ibm-security-solutions-prod/README.md
+  url_rh_access:
+    https://access.redhat.com
+  uba:
+    User Behavior Analytics
+  uba_tm:
+    IBM&reg; Security User Behavior Analytics
+
+#//VVV
+
+#//WWW
+
+#//XXX
+  xfe_full:
+    IBM&reg; Security Threat Intelligence Insights
+  xfe:
+    Threat Intelligence Insights
+  xfe_notm:
+    IBM Security Threat Intelligence Insights
+  xfe_short:
+    Threat Intelligence Insights
+  xfe_xchg:
+    IBM&reg; X-Force&reg; Exchange
+  xfe_xchg_notm:
+    IBM X-Force Exchange
+
+
+#//YYY
+
+#//ZZZ
+
+
+# Last updated: Mar 19, 2021
+# Common services, Cloud Pak, and other product names
+
+  cloud_pak:
+    IBM Cloud Pak&reg;
+  cloud_pak_notm:
+    IBM Cloud Pak
+  cloud_paks:
+    IBM Cloud Pak&reg; solutions
+  cloud_paks_notm:
+    IBM Cloud Pak solutions
+  cloud_pak_integration:
+    IBM Cloud Pak&reg; for Integration
+  cloud_pak_integration_notm:
+    IBM Cloud Pak for Integration
+  cloud_pak_mcm:
+    IBM Cloud Pak&reg; for Multicloud Management
+  cloud_pak_mcm_notm:
+    IBM Cloud Pak for Multicloud Management
+  icpa:
+    IBM Cloud Pak for Applications
+  icpa_rm:
+    IBM Cloud Pak&reg; for Applications
+  cloud_pak_auto:
+    IBM Cloud Pak&reg; for Automation
+  cloud_pak_auto_notm:
+    IBM Cloud Pak for Automation
+  cloud_pak_data:
+    IBM Cloud Pak&reg; for Data
+  cloud_pak_data_notm:
+    IBM Cloud Pak for Data
+  cloud_pak_security:
+    IBM Cloud Pak&reg; for Security
+  cloud_pak_security_notm:
+    IBM Cloud Pak for Security
+  cloud:
+    IBM Cloud&reg;
+  cloud_notm:
+    IBM Cloud
+  cloud_registry_notm:
+    IBM Cloud Container Registry
+  cloud_registry:
+    IBM Cloud&reg; Container Registry
+  contain_soft_mark:
+    IBM&reg; Certified Container
+  contain_soft:
+    IBM Certified Container
+  contain_softs_mark:
+    IBM&reg; Certified Containers
+  contain_softs:
+    IBM Certified Containers
+  cs:
+    IBM Cloud Pak foundational services
+  cs_tm:
+    IBM Cloud Pak&reg; foundational services
+  cs_short:
+    foundational services
+
+# Replace the value for the following conrefs with the name of your Cloud Pak or product
+# Replace the following 2 conrefs with your product name without trademark
+  product:
+    your product
+  product_uc:
+    Your product
+# Replace the following 2 conrefs with your product name with trademark
+  product_tm:
+    your product
+  product_tm_uc:
+    Your product
+  admin_hub:
+    Administration Hub
+
+# Red Hat, OpenShift names
+
+  ocp_tm:
+    Red Hat&reg; OpenShift&reg; Container Platform
+  ocp_notm:
+    Red Hat OpenShift Container Platform
+  ocp:
+    OpenShift Container Platform
+  roks:
+    Red Hat OpenShift Kubernetes Service
+  roks_tm:
+    Red Hat&reg; OpenShift&reg; Kubernetes Service
+  open_s_tm:
+    Red Hat&reg; OpenShift&reg;
+  red_hat_openshift:
+    Red Hat OpenShift
+  open_s:
+    OpenShift
+  icp_OpenShift:
+    IBM Cloud Private with OpenShift
+  iks_ocp:
+    Red Hat OpenShift on IBM Cloud
+  iks_ocp_mark:
+    Red Hat&reg; OpenShift&reg; on IBM Cloud&trade;
+  ocp_ibmcloud:
+    OpenShift on IBM Cloud
+  quay_tm:
+    Red Hat&reg Quay.io
+  ansible:
+    Ansible&reg;
+  ansible_notm:
+    Ansible
+  ansible_tower:
+    Ansible&reg; Tower
+  ansible_tower_notm:
+    Ansible Tower
+  rh_ansible:
+    Red Hat&reg; Ansible&reg;
+  rh_ansible_notm:
+    Red Hat Ansible
+  rh_ansible_tower:
+    Red Hat&reg; Ansible&reg; Tower
+  rh_ansible_tower_notm:
+    Red Hat Ansible Tower
+  rhel:
+    Red Hat Enterprise Linux
+  rhel_short:
+    RHEL
+  rhel_marked:
+    Red Hat&reg; Enterprise Linux&reg;
+
+
+# IBM product names
+
+  cfee:
+    Cloud Foundry Enterprise Environment
+  IBM:
+    IBM&reg;
+  IBM_notm:
+    IBM
+  icp:
+    IBM&reg; Cloud Private
+  icp_ce_notm:
+    IBM Cloud Private-CE
+  icp_notm:
+    IBM Cloud Private
+  iks:
+    IBM Cloud Kubernetes Service
+  mcm:
+    IBM&reg; Multicloud Manager
+  mcm_notm:
+    IBM Multicloud Manager
+  qrad_notm:
+    IBM QRadar
+
+# Product tools and terminology
+
+  catalog:
+    Catalog
+  gui:
+    console
+  kui:
+    Visual Web Terminal
+  zen:
+    Platform UI Framework
+
+# Platforms, Operating Systems
+
+  linux:
+    Linux&reg;
+  linux_notm:
+    Linux
+  linux_bit:
+    Linux&reg; x86_64
+  linux_bit_notm:
+    Linux x86_64
+  linuxone:
+    LinuxONE
+  s390:
+    Linux&reg; on IBM&reg; Z and LinuxONE
+  s390_notm:
+    Linux on IBM Z and LinuxONE
+  ppc:
+    Linux&reg; on Power&reg; (ppc64le)
+  ppc_notm:
+    Linux on Power (ppc64le)
+  windows:
+    Windows
+  zsys:
+    IBM&reg; Z
+  zsys_notm:
+    IBM Z
+
+# Versions
+
+  version:
+    3.2.1
+  tech_prev:
+    Important&colon; This content is a technical preview, and should not be relied on in a production environment&period;
+  cs_case:
+    1.3.2
+  cp4s_case_version:
+    1.0.20
+
+# Disclaimers
+
+  dis_installonce:
+    This service is a common service that can be shared across IBM Cloud Paks and other IBM products&period; If you have installed multiple IBM Cloud Paks or other IBM products that support using this service, the service is installed only once on a cluster and is shared by each IBM Cloud Pak or product&period;
+
+# Deprecated (to be removed with next release)
+
+  rh_tm:
+    Red Hat&reg
