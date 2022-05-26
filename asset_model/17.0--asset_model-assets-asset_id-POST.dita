@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN" "dtd/ibm-reference.dtd">
+<reference id="api-17.0--asset_model-assets-asset_id-POST" xml:lang="en-us">
+<title>POST /asset_model/assets/{asset_id}</title>
+<shortdesc>Update an asset with several pertinent pieces of information.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<apiname>/asset_model/assets/{asset_id}</apiname>
+<keyword>POST</keyword>
+<keyword>API</keyword>
+<keyword>REST API</keyword>
+</keywords>
+</metadata>
+</prolog>
+<refbody>
+<refsyn>
+<p>Update an asset with several pertinent pieces of information. The <b>asset_id</b> tag is mandatory, and is the unique identifier for an asset. 
+ This field is available through the <b>/asset_model/assets</b> or <b>/asset_model/saved_searches/{saved_search_id}/results</b> query. 
+ To update properties, the property type id which is available through the <b>/asset_model/properties</b> query should be provided along
+ with the new value. See the sample provided demonstrating an example asset update.</p>
+</refsyn>
+<refsyn>
+<table pgwide="0">
+<title>POST /asset_model/assets/{asset_id} resource details</title>
+<desc><p outputclass="summary">POST /asset_model/assets/{asset_id} resource details</p></desc>
+<tgroup cols="1">
+<colspec colname="col1" colwidth="1*" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">MIME Type</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><p>text/plain
+</p></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</refsyn>
+<refsyn>
+<table pgwide="0">
+<title>POST /asset_model/assets/{asset_id} request parameter details</title>
+<desc><p outputclass="summary">POST /asset_model/assets/{asset_id} request parameter details</p></desc>
+<tgroup cols="6">
+<colspec colname="col1" colwidth="1*" />
+<colspec colname="col2" colwidth="1*" />
+<colspec colname="col3" colwidth="1*" />
+<colspec colname="col4" colwidth="1*" />
+<colspec colname="col5" colwidth="1*" />
+<colspec colname="col6" colwidth="2*" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">Parameter</entry>
+<entry colname="col2">Type</entry>
+<entry colname="col3">Optionality</entry>
+<entry colname="col4">Data Type</entry>
+<entry colname="col5">MIME Type</entry>
+<entry colname="col6">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><p>asset_id</p></entry>
+<entry colname="col2"><p>path</p></entry>
+<entry colname="col3"><p>Required</p></entry>
+<entry colname="col4"><p>String</p></entry>
+<entry colname="col5"><p>text/plain</p></entry>
+<entry colname="col6"><p>Unique identifier of the asset to update.</p></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</refsyn>
+<refsyn>
+<table pgwide="0">
+<title>POST /asset_model/assets/{asset_id} request body details</title>
+<desc><p outputclass="summary">POST /asset_model/assets/{asset_id} request body details</p></desc>
+<tgroup cols="5">
+<colspec colname="col1" colwidth="1*" />
+<colspec colname="col2" colwidth="1*" />
+<colspec colname="col3" colwidth="1*" />
+<colspec colname="col4" colwidth="2*" />
+<colspec colname="col5" colwidth="2*" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">Parameter</entry>
+<entry colname="col2">Data Type</entry>
+<entry colname="col3">MIME Type</entry>
+<entry colname="col4">Description</entry>
+<entry colname="col5">Sample</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><p>asset</p></entry>
+<entry colname="col2"><p>JSON</p></entry>
+<entry colname="col3"><p>application/json</p></entry>
+<entry colname="col4"><p>JSON representation of an asset.</p></entry>
+<entry colname="col5"><p>{
+  "properties": [
+    {
+      "type_id": 1001,
+      "value": "given name value"
+    },
+    {
+      "type_id": 1002,
+      "value": "unified name value"
+    }
+  ]
+}</p></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</refsyn>
+<refsyn>
+<table pgwide="0">
+<title>POST /asset_model/assets/{asset_id} response codes</title>
+<desc><p outputclass="summary">POST /asset_model/assets/{asset_id} response codes</p></desc>
+<tgroup cols="3">
+<colspec colname="col1" colwidth="1*" />
+<colspec colname="col2" colwidth="1*" />
+<colspec colname="col3" colwidth="3*" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">HTTP Response Code</entry>
+<entry colname="col2">Unique Code</entry>
+<entry colname="col3">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><p>202</p></entry>
+<entry colname="col2"><p/></entry>
+<entry colname="col3"><p>The request to update the asset was successful. The update will take place when the asset profile application receives the request.</p></entry>
+</row>
+<row>
+<entry colname="col1"><p>422</p></entry>
+<entry colname="col2"><p>1005</p></entry>
+<entry colname="col3"><p>One or more of the requested property updates were invalid.</p></entry>
+</row>
+<row>
+<entry colname="col1"><p>500</p></entry>
+<entry colname="col2"><p>1020</p></entry>
+<entry colname="col3"><p>The server encountered an error registering the update with the asset profile application.</p></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</refsyn>
+<refsyn>
+<title>Response Description</title>
+<p>Information about the asset that was updated.</p>
+</refsyn>
+<refsyn>
+<title>Response Sample</title>
+<codeblock>
+String
+</codeblock>
+</refsyn>
+</refbody>
+</reference>

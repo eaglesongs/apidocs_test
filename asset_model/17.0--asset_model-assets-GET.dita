@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN" "dtd/ibm-reference.dtd">
+<reference id="api-17.0--asset_model-assets-GET" xml:lang="en-us">
+<title>GET /asset_model/assets</title>
+<shortdesc>This lists all assets found in the model.  This endpoint supports sorting on id, domain_id, vulnerability_count and risk_score_sum, and filtering on all fields.  EXCEPTION:  LIKE, ILIKE, and BETWEEN do not work on the interfaces(ip_addresses(value)) field.  It is possible to use the inequality operators to work around this in most cases.  Use of the fields header to request only the necessary fields will improve API performance.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<apiname>/asset_model/assets</apiname>
+<keyword>GET</keyword>
+<keyword>API</keyword>
+<keyword>REST API</keyword>
+</keywords>
+</metadata>
+</prolog>
+<refbody>
+<refsyn>
+<p>List all assets found in the model.  This endpoint supports sorting on id, domain_id, vulnerability_count and risk_score_sum, and filtering on all fields.  EXCEPTION:  LIKE, ILIKE, and BETWEEN do not work on the interfaces(ip_addresses(value)) field.  It is possible to use the inequality operators to work around this in most cases. Use of the fields header to request only the necessary fields will improve API performance.</p>
+</refsyn>
+<refsyn>
+<table pgwide="0">
+<title>GET /asset_model/assets resource details</title>
+<desc><p outputclass="summary">GET /asset_model/assets resource details</p></desc>
+<tgroup cols="1">
+<colspec colname="col1" colwidth="1*" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">MIME Type</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><p>application/json
+</p></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</refsyn>
+<refsyn>
+<table pgwide="0">
+<title>GET /asset_model/assets request parameter details</title>
+<desc><p outputclass="summary">GET /asset_model/assets request parameter details</p></desc>
+<tgroup cols="6">
+<colspec colname="col1" colwidth="1*" />
+<colspec colname="col2" colwidth="1*" />
+<colspec colname="col3" colwidth="1*" />
+<colspec colname="col4" colwidth="1*" />
+<colspec colname="col5" colwidth="1*" />
+<colspec colname="col6" colwidth="2*" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">Parameter</entry>
+<entry colname="col2">Type</entry>
+<entry colname="col3">Optionality</entry>
+<entry colname="col4">Data Type</entry>
+<entry colname="col5">MIME Type</entry>
+<entry colname="col6">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><p>sort</p></entry>
+<entry colname="col2"><p>query</p></entry>
+<entry colname="col3"><p>Optional</p></entry>
+<entry colname="col4"><p>String</p></entry>
+<entry colname="col5"><p>text/plain</p></entry>
+<entry colname="col6"><p>Optional - This parameter is used to sort the elements in a list.</p></entry>
+</row>
+<row>
+<entry colname="col1"><p>fields</p></entry>
+<entry colname="col2"><p>query</p></entry>
+<entry colname="col3"><p>Optional</p></entry>
+<entry colname="col4"><p>String</p></entry>
+<entry colname="col5"><p>text/plain</p></entry>
+<entry colname="col6"><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p></entry>
+</row>
+<row>
+<entry colname="col1"><p>filter</p></entry>
+<entry colname="col2"><p>query</p></entry>
+<entry colname="col3"><p>Optional</p></entry>
+<entry colname="col4"><p>String</p></entry>
+<entry colname="col5"><p>text/plain</p></entry>
+<entry colname="col6"><p>Optional - This parameter is used to restrict the elements in a list base on the contents of various fields.</p></entry>
+</row>
+<row>
+<entry colname="col1"><p>Range</p></entry>
+<entry colname="col2"><p>header</p></entry>
+<entry colname="col3"><p>Optional</p></entry>
+<entry colname="col4"><p>String</p></entry>
+<entry colname="col5"><p>text/plain</p></entry>
+<entry colname="col6"><p>Optional - Use this parameter to restrict the number of elements that are returned in the list to a specified range. The list is indexed starting at zero.</p></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</refsyn>
+<refsyn>
+<table pgwide="0">
+<title>GET /asset_model/assets response codes</title>
+<desc><p outputclass="summary">GET /asset_model/assets response codes</p></desc>
+<tgroup cols="3">
+<colspec colname="col1" colwidth="1*" />
+<colspec colname="col2" colwidth="1*" />
+<colspec colname="col3" colwidth="3*" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">HTTP Response Code</entry>
+<entry colname="col2">Unique Code</entry>
+<entry colname="col3">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><p>200</p></entry>
+<entry colname="col2"><p/></entry>
+<entry colname="col3"><p>The request to retrieve assets completed
+                         successfully.</p></entry>
+</row>
+<row>
+<entry colname="col1"><p>500</p></entry>
+<entry colname="col2"><p>1020</p></entry>
+<entry colname="col3"><p>null</p></entry>
+</row>
+<row>
+<entry colname="col1"><p>500</p></entry>
+<entry colname="col2"><p>1021</p></entry>
+<entry colname="col3"><p>null</p></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</refsyn>
+<refsyn>
+<title>Response Description</title>
+<p>List of Asset objects with the following fields:
+ <ul>
+ <li><b>id</b> - Long - The ID of the asset.</li>
+ <li><b>domain_id</b> - Long - The ID of the domain this asset belongs to.</li>
+ <li><b>vulnerability_count</b> - Long - The total number of vulnerabilities associated with this asset</li>
+ <li><b>risk_score_sum</b> - Double - The sum of the CVSS scores of the vulnerabilities on this asset</li>
+ <li><b>hostnames</b> - Array - The hostnames on this asset
+      <ul>
+      <li><b>id</b> - Long - The ID of this hostname</li>
+      <li><b>type</b> - Enum - The type of hostname. One of "DNS", "NETBIOS", or "NETBIOSGROUP"</li>
+      <li><b>name</b> - String - The hostname</li>
+      <li><b>last_scanned_for</b> - Long - The time this hostname was created.  This time is in milliseconds since epoch.</li>
+      <li><b>first_seen_scanner</b> - Long - The time this hostname was first seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+      <li><b>first_seen_profiler</b> - Long - The time this hostname was first seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+      <li><b>last_seen_scanner</b> - Long - The time this hostname was most recently seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+      <li><b>last_seen_profiler</b> - Long -  The time this hostname was most recently seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+      </ul>
+ </li>
+ <li><b>interfaces</b> - Array - The interfaces on this asset
+      <ul>
+      <li><b>id</b> - Long - The ID of this interface</li>
+      <li><b>mac_address</b> - String -  The mac address of this interface.  Null if Unknown.</li>
+      <li><b>ip_addresses</b> - Array - The IP addresses on this interface</li>
+          <ul>
+          <li><b>id</b> - Long - The ID of this interface</li>
+          <li><b>network_id</b> - Long - The ID of the network this IP address belongs to in QRadar's network hierarchy</li>
+          <li><b>value</b> - String -  The IP address</li>
+          <li><b>type</b> - Enum -  The type of this IP address. One of "IPV4" or "IPV6"</li>
+          <li><b>ip_addresses</b> - Array - The IP addresses on this interface</li>
+          <li><b>created</b> - Long - The time this IP address was created.  This time is in milliseconds since epoch.</li>
+          <li><b>first_seen_scanner</b> - Long - The time this IP address was first seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+          <li><b>first_seen_profiler</b> - Long - The time this IP address was first seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+          <li><b>last_seen_scanner</b> - Long - The time this IP address was most recently seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+          <li><b>last_seen_profiler</b> - Long -  The time this IP address was most recently seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+      </ul>
+ </li>
+      <li><b>created</b> - Long - The time this interface was created.  This time is in milliseconds since epoch.</li>
+      <li><b>first_seen_scanner</b> - Long - The time this interface was first seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+      <li><b>first_seen_profiler</b> - Long - The time this interface was first seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+      <li><b>last_seen_scanner</b> - Long - The time this interface was most recently seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+      <li><b>last_seen_profiler</b> - Long -  The time this interface was most recently seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+      </ul>
+ </li>
+ <li><b>products</b> - Array - The software products detected on this asset
+      <ul>
+      <li><b>id</b> - Long - The ID of this software product instance in QRadar's asset model</li>
+      <li><b>product_variant_id</b> - Long - The ID of this software product variant in QRadar's catalog of products.</li>
+      <li><b>created</b> - Long - The time this product was most recently scanned for.  This time is in milliseconds since epoch.</li>
+      <li><b>first_seen_scanner</b> - Long - The time this product was first seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+      <li><b>first_seen_profiler</b> - Long - The time this product was first seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+      <li><b>last_seen_scanner</b> - Long - The time this product was most recently seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+      <li><b>last_seen_profiler</b> - Long -  The time this product was most recently seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+      </ul>
+ </li>
+ <li><b>properties</b> - Array - Various system and custom properties on this asset
+      <ul>
+      <li><b>id</b> - Long - The ID of this property.</li>
+      <li><b>type_id</b> - Long - The ID of the type of this property</li>
+      <li><b>name</b> - String - The name of the type of this property</li>
+      <li><b>value</b> - String - The value of this property</li>
+      <li><b>last_reported_by</b> - String - The source of the most recent update to this property</li>
+      <li><b>last_reported</b> - Long - The time this property was last updated.  This time is in milliseconds since epoch.</li>
+      </ul>
+ </li>
+ <li><b>users</b> - Array - The users associated with this asset
+      <ul>
+      <li><b>id</b> - Long - The ID of this username.</li>
+      <li><b>username</b> - String - The username.</li>
+      <li><b>first_seen_scanner</b> - Long - The time this username was first seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+      <li><b>first_seen_profiler</b> - Long - The time this username was first seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+      <li><b>last_seen_scanner</b> - Long - The time this username was most recently seen during a vulnerability scan.  This time is in milliseconds since epoch.</li>
+      <li><b>last_seen_profiler</b> - Long -  The time this username was most recently seen in event or flow traffic.  This time is in milliseconds since epoch.</li>
+      </ul>
+ </li></p>
+</refsyn>
+<refsyn>
+<title>Response Sample</title>
+<codeblock>
+[
+    {
+        "domain_id": 42,
+        "hostnames": [
+            {
+                "created": 42,
+                "first_seen_profiler": 42,
+                "first_seen_scanner": 42,
+                "id": 42,
+                "last_seen_profiler": 42,
+                "last_seen_scanner": 42,
+                "name": "String",
+                "type": "String &lt;one of: DNS, NETBIOS, NETBIOSGROUP&gt;"
+            }
+        ],
+        "id": 42,
+        "interfaces": [
+            {
+                "created": 42,
+                "first_seen_profiler": 42,
+                "first_seen_scanner": 42,
+                "id": 42,
+                "ip_addresses": [
+                    {
+                        "created": 42,
+                        "first_seen_profiler": 42,
+                        "first_seen_scanner": 42,
+                        "id": 42,
+                        "last_seen_profiler": 42,
+                        "last_seen_scanner": 42,
+                        "network_id": 42,
+                        "type": "String",
+                        "value": "String"
+                    }
+                ],
+                "last_seen_profiler": 42,
+                "last_seen_scanner": 42,
+                "mac_address": "String"
+            }
+        ],
+        "products": [
+            {
+                "first_seen_profiler": 42,
+                "first_seen_scanner": 42,
+                "id": 42,
+                "last_scanned_for": 42,
+                "last_seen_profiler": 42,
+                "last_seen_scanner": 42,
+                "product_variant_id": 42
+            }
+        ],
+        "properties": [
+            {
+                "id": 42,
+                "last_reported": 42,
+                "last_reported_by": "String",
+                "name": "String",
+                "type_id": 42,
+                "value": "String"
+            }
+        ],
+        "risk_score_sum": 42.5,
+        "users": [
+            {
+                "first_seen_profiler": 42,
+                "first_seen_scanner": 42,
+                "id": 42,
+                "last_seen_profiler": 42,
+                "last_seen_scanner": 42,
+                "username": "String"
+            }
+        ],
+        "vulnerability_count": 42
+    }
+]
+</codeblock>
+</refsyn>
+</refbody>
+</reference>

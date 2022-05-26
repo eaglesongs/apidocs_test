@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE reference PUBLIC "-//IBM//DTD DITA IBM Reference//EN" "dtd/ibm-reference.dtd">
+<reference id="api-17.0--asset_model-saved_searches-saved_search_id-GET" xml:lang="en-us">
+<title>GET /asset_model/saved_searches/{saved_search_id}</title>
+<shortdesc>Retrieves an asset saved search.</shortdesc>
+<prolog>
+<metadata>
+<keywords>
+<apiname>/asset_model/saved_searches/{saved_search_id}</apiname>
+<keyword>GET</keyword>
+<keyword>API</keyword>
+<keyword>REST API</keyword>
+</keywords>
+</metadata>
+</prolog>
+<refbody>
+<refsyn>
+<p>Retrieves an asset saved search.</p>
+</refsyn>
+<refsyn>
+<table pgwide="0">
+<title>GET /asset_model/saved_searches/{saved_search_id} resource details</title>
+<desc><p outputclass="summary">GET /asset_model/saved_searches/{saved_search_id} resource details</p></desc>
+<tgroup cols="1">
+<colspec colname="col1" colwidth="1*" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">MIME Type</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><p>application/json
+</p></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</refsyn>
+<refsyn>
+<table pgwide="0">
+<title>GET /asset_model/saved_searches/{saved_search_id} request parameter details</title>
+<desc><p outputclass="summary">GET /asset_model/saved_searches/{saved_search_id} request parameter details</p></desc>
+<tgroup cols="6">
+<colspec colname="col1" colwidth="1*" />
+<colspec colname="col2" colwidth="1*" />
+<colspec colname="col3" colwidth="1*" />
+<colspec colname="col4" colwidth="1*" />
+<colspec colname="col5" colwidth="1*" />
+<colspec colname="col6" colwidth="2*" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">Parameter</entry>
+<entry colname="col2">Type</entry>
+<entry colname="col3">Optionality</entry>
+<entry colname="col4">Data Type</entry>
+<entry colname="col5">MIME Type</entry>
+<entry colname="col6">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><p>saved_search_id</p></entry>
+<entry colname="col2"><p>path</p></entry>
+<entry colname="col3"><p>Required</p></entry>
+<entry colname="col4"><p>Number (Integer)</p></entry>
+<entry colname="col5"><p>text/plain</p></entry>
+<entry colname="col6"><p>null</p></entry>
+</row>
+<row>
+<entry colname="col1"><p>fields</p></entry>
+<entry colname="col2"><p>query</p></entry>
+<entry colname="col3"><p>Optional</p></entry>
+<entry colname="col4"><p>String</p></entry>
+<entry colname="col5"><p>text/plain</p></entry>
+<entry colname="col6"><p>Optional - Use this parameter to specify which fields you would like to get back in the response. Fields that are not named are excluded. Specify subfields in brackets and multiple fields in the same object are separated by commas.</p></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</refsyn>
+<refsyn>
+<table pgwide="0">
+<title>GET /asset_model/saved_searches/{saved_search_id} response codes</title>
+<desc><p outputclass="summary">GET /asset_model/saved_searches/{saved_search_id} response codes</p></desc>
+<tgroup cols="3">
+<colspec colname="col1" colwidth="1*" />
+<colspec colname="col2" colwidth="1*" />
+<colspec colname="col3" colwidth="3*" />
+<thead>
+<row valign="bottom">
+<entry colname="col1">HTTP Response Code</entry>
+<entry colname="col2">Unique Code</entry>
+<entry colname="col3">Description</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry colname="col1"><p>200</p></entry>
+<entry colname="col2"><p/></entry>
+<entry colname="col3"><p>The asset saved search was retrieved,</p></entry>
+</row>
+<row>
+<entry colname="col1"><p>404</p></entry>
+<entry colname="col2"><p>1002</p></entry>
+<entry colname="col3"><p>The asset saved search does not exist,</p></entry>
+</row>
+<row>
+<entry colname="col1"><p>500</p></entry>
+<entry colname="col2"><p>1020</p></entry>
+<entry colname="col3"><p>An error occurred during the attempt to retrieve the asset saved search,</p></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</refsyn>
+<refsyn>
+<title>Response Description</title>
+<p>The asset saved search after it is retrieved. An Asset Saved Search object contains the following fields:
+ <ul>
+ <li><b>id</b> - Long - The ID of the asset saved search.</li>
+ <li><b>name</b> - String - The name of the asset saved search.</li>
+ <li><b>owner</b> - String - The owner of the asset saved search.</li>
+ <li><b>isShared</b> - Boolean - True if the asset saved search is shared with other users.</li>
+ <li><b>description</b> - String - The description of the asset saved search.</li>
+ <li><b>filters</b> - List of Strings - The asset saved search filters.</li>
+ <li><b>columns</b> - List of Strings - The asset saved search columns.</li>
+ </ul></p>
+</refsyn>
+<refsyn>
+<title>Response Sample</title>
+<codeblock>
+{
+    "columns": [
+        {
+            "name": "String",
+            "type": "String"
+        }
+    ],
+    "description": "String",
+    "filters": [
+        {
+            "operator": "String",
+            "parameter": "String",
+            "value": "String"
+        }
+    ],
+    "id": 42,
+    "is_shared": true,
+    "name": "String",
+    "owner": "String"
+}
+</codeblock>
+</refsyn>
+</refbody>
+</reference>
