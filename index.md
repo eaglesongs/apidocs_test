@@ -7,6 +7,7 @@
 *   [POST /asset_model/configuration](asset_model/17.0--asset_model-configuration-POST.dita)
 *   [GET /asset_model/properties](asset_model/17.0--asset_model-properties-GET.dita)
 
+## HTML test
 *   [What's new in REST API Version 17.0](api_170/c_rest_api_whats_new_170.html)
 *   [access endpoints](api_170/c_rest_api_version170_access_intro.html)
     *   [GET /access/login\_attempts](api_170/17.0--access-login_attempts-GET.html)
