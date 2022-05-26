@@ -1,5 +1,12 @@
 # REST API Version 17.0
 
+## DITA test
+*[POST /asset_model/assets/{asset_id}](asset_model/17.0--asset_model-assets-asset_id-POST.dita)
+*[GET /asset_model/assets](asset_model/17.0--asset_model-assets-GET.dita)
+*[GET /asset_model/configuration](asset_model/17.0--asset_model-configuration-GET.dita)
+*[POST /asset_model/configuration](asset_model/17.0--asset_model-configuration-POST.dita)
+*[GET /asset_model/properties](asset_model/17.0--asset_model-properties-GET.dita)
+
 *   [What's new in REST API Version 17.0](api_170/c_rest_api_whats_new_170.html)
 *   [access endpoints](api_170/c_rest_api_version170_access_intro.html)
     *   [GET /access/login\_attempts](api_170/17.0--access-login_attempts-GET.html)
